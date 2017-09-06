@@ -58,11 +58,29 @@ $("#query").click(function(){
 </code>
 ---------------------
 
+----------------------
 
+# IE、火狐、谷歌浏览器下兼容统一select样式
 
+<pre>
+  select{
+*    //谷歌、火狐边框不一样，复写一下；
+    border:1px solid #ccc;
+*    将默认的select样式清除  
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+*    选择图片
+    background: url("hshfImg/mark_bot.png") no-repeat scroll 150px center transparent;
+*    给小箭头留位置，避免覆盖文字；
+    padding-right: 34px;
+    color: #8e8e8e;
+  }
+* 清除ie下拉箭头默认样式，隐藏；
+  select::-ms-expand { display: none; }
+  </code>
 
-
-
+* 给小箭头留位置，避免覆盖文字；
 
 
 
